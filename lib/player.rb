@@ -7,12 +7,9 @@ class Player
   attr_accessor :player_name, :player_life_points
 
   def initialize(player_name)
-
-
-      @player_name = player_name
-      @player_life_points = 10
-      puts "Joueur #{@player_name} créé avec #{@player_life_points} points de vie" 
-
+    @player_name = player_name
+    @player_life_points = 10
+    puts "Joueur #{@player_name} créé avec #{@player_life_points} points de vie" 
     puts
   end
 
@@ -29,6 +26,7 @@ class Player
   def gets_damage(damages=1) #inflige des dégats au joueur en question
     @damages=damages
     @player_life_points = @player_life_points - @damages
+    if @player_life_points < 0 then @player_life_points =0 end
     puts "Le joueur #{@player_name} a pris #{@damages} points de dégats"
     player_show_state
     
@@ -66,6 +64,7 @@ class HumanPlayer < Player
     if new_weapon > @weapon_level
        @weapon_level = new_weapon
        puts "Youhou ! elle est meilleure que ton arme actuelle : tu la prends."
+       puts "Tu possèdes maintenant une arme de niveau #{@weapon_level}"
     else
       puts "M@*#$... elle n'est pas mieux que ton arme actuelle..."
     end
@@ -88,6 +87,10 @@ class HumanPlayer < Player
     else
       puts "test echec"
     end
+  end
+
+  def compute_damage # on calcul le nombre de points de vie retiré lors d'une attaque
+    return rand(1..6)*@weapon_level
   end
 
 end
