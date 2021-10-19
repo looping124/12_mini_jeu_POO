@@ -36,14 +36,14 @@ while player0.player_life_points > 0 && (player1.player_life_points > 0 || playe
   puts
   puts "attaquer un joueur en vue :"
   if player1.player_life_points > 0
-      puts "0 - Josiane a #{player1.player_life_points} points de vie"
+      puts "0 - #{player1.player_name} a #{player1.player_life_points} points de vie"
     else
-      puts "X - Josiane est éliminée"
+      puts "X - #{player1.player_name} est éliminée"
     end 
     if player2.player_life_points > 0
-      puts "1 - Josiane a #{player2.player_life_points} points de vie"
+      puts "1 - #{player2.player_name} a #{player2.player_life_points} points de vie"
     else
-      puts "X - Josiane est éliminée"
+      puts "X - #{player2.player_name} est éliminée"
   end 
   puts
   user_choice = gets.chomp
