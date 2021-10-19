@@ -24,12 +24,6 @@ class Player
     end
   end
 
-  # def game_show_state (player1,player2)
-  #   puts "Etat des Joueurs :"
-  #   puts "Le joueur #{player1.player_name} est en vie avec #{player1.player_life_points} points de vie."
-  #   puts "Le joueur #{player2.player_name} est en vie avec #{player2.player_life_points} points de vie."
-  #   puts
-  # end
 
 
   def gets_damage(damages=1) #inflige des dégats au joueur en question
