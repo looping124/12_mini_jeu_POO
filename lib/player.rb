@@ -36,6 +36,7 @@ class Player
     @damages = compute_damage
     puts "le joueur #{@player_name} attaque le joueur #{player_attacked.player_name} et lui inflige #{@damages} points de dégats"
     player_attacked.gets_damage(@damages)
+    puts
   end
 
 
