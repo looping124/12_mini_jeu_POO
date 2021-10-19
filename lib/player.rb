@@ -4,7 +4,7 @@ require 'rubocop'
 
 
 class Player
-  attr_accessor :player_name, :player_life_points
+  attr_accessor :player_name, :player_life_points, :players_left, :enemies_in_sight
 
   def initialize(player_name)
     @player_name = player_name

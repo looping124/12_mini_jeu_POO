@@ -1,2 +1,2 @@
-Ceci est un dossier pour un projet ruby initialisé depuis le programme /home/looping/00_ruby_dir_creator.rb 
- 00_ruby_dir_creator.rb v0.1
+Projet Ruby THP
+Création d'un jeu em mode "battle royal", le dernier debout gagne !

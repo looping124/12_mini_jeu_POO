@@ -21,6 +21,7 @@ class Game
   end
 
   def kill_player (player)
+    puts "Le joueur #{player.player_name} est éliminé !"
     @@enemies_array.delete(player)
     return @@enemies_array
   end
@@ -42,8 +43,7 @@ class Game
 
 
   def menu
-    puts "ROUND X ------------------------------------------"
-    puts
+
     puts "Quelle action veux-tu effectuer ?"
     puts
     puts "a - chercher une meilleure arme"
